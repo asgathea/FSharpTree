@@ -6,10 +6,10 @@ Parameter bitte erst nach dem Start der Anwendung eingeben, also `dotnet run`, e
 * im Branch "less_state" Höhe und beliebiges Zeichen als Deko-Element, z.B. `5 *`
 
 ```
-    *       *
-    X       X
-   XXX     X*X
-  XXXXX   X*X*X
- XXXXXXX X*X*X*X
-    I       I
+    *       
+    X      *     *
+   XXX     X     X
+  XXXXX   X*X   XoX
+ XXXXXXX X*X*X XoXoX
+    I      I     I
 ```
