@@ -1,16 +1,16 @@
 ﻿open System
 
 let input = Console.ReadLine()
-let inputs = input.Split( );
-let height = inputs.[0] |> int
-let mutable style = 0
-let mutable spacing = height - 1
-let mutable twig_row = 1
+let input_values = input.Split( );
+let tree_height = input_values.[0] |> int
 let space = " "
-let mutable twig = "XX"
+let mutable chosen_twigs = "XX"
 
-if inputs.Length > 1 then style <- inputs.[1] |> int
-if style = 1 then twig <- "X*"
+if input_values.Length > 1 then chosen_twigs <- "X" + input_values.[1]
+
+let twigs = chosen_twigs
+
+let spacing_per_row row = tree_height - row - 1
 
 let print_char number_of char =
     let mutable count = number_of
@@ -19,22 +19,23 @@ let print_char number_of char =
         count <- count - 1
 
 // print star
-print_char spacing space
+let center_spacing = spacing_per_row 0
+print_char center_spacing space
 printfn "%s" "*"
 
 // print 1st twig row
-print_char spacing space
+print_char center_spacing space
 printfn "%s" "X"
 
 // print other twig rows
-while spacing > 0 do
-    spacing <- spacing - 1
-    print_char spacing space
-    print_char twig_row twig
+let mutable current_row = 1
+while current_row < tree_height do
+    let row_spacing = spacing_per_row current_row
+    print_char row_spacing space
+    print_char current_row twigs
     printfn "%s" "X"
-    twig_row <- twig_row + 1
+    current_row <- current_row + 1
 
 // print stem
-spacing <- height - 1
-print_char spacing space
+print_char center_spacing space
 printfn "%s" "I"
