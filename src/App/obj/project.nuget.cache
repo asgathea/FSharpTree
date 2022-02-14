@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6siiN8TeSQ6e8TcbSxBtPBqHs5NPbvOxw5Kpw0FcUDUXE1JMdN1Mnw+3tTPEYBMbiRUpYcBlocD4uBFEAXazCQ==",
+  "success": true,
+  "projectFilePath": "/home/astrid/Codestuff/SharpTree/src/App/App.fsproj",
+  "expectedPackageFiles": [
+    "/home/astrid/.nuget/packages/fsharp.core/6.0.1/fsharp.core.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
